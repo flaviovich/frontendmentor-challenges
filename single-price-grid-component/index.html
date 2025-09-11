@@ -6,9 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/main.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -24,8 +30,8 @@
 </head>
 
 <body>
-  <main>
-    <article>
+  <main class="container">
+    <article class="intro">
       <header>
         <h1>Join our community</h1>
         <p><strong>30-day, hassle-free money back guarantee</strong></p>
@@ -36,18 +42,18 @@
       </p>
     </article>
 
-    <section>
-      <h2>Monthly Subscription</h2>
+    <section class="plan">
+      <h3>Monthly Subscription</h3>
       <p>
-        <strong><span>$<span>29</span></span></strong>
-        <span>per month</span>
+        <strong><span class="plan-price">$29</span></strong>
+        <span class="plan-interval">per month</span>
       </p>
       <p>Full access for less than &dollar;1 a day</p>
-      <button type="button">Sign Up</button>
+      <button class="btn-signup" type="button">Sign Up</button>
     </section>
 
-    <section>
-      <h2>Why Us</h2>
+    <section class="features">
+      <h3>Why Us</h3>
       <ul>
         <li>Tutorials by industry experts</li>
         <li>Peer &amp; expert code review</li>
@@ -64,7 +70,7 @@
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
         Mentor</a>.
-      Coded by <a href="#" rel="noopener">Your Name Here</a>.
+      Coded by <a href="https://www.linkedin.com/in/flavio-rios-nieto/" rel="noopener">Flavio Rios</a>.
     </p>
   </footer>
 </body>
