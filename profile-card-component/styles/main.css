@@ -1,0 +1,122 @@
+:root {
+  --font-kumbh: "Kumbh Sans", sans-serif;
+  --color-blue-600: hsl(185, 75%, 39%);
+  --color-navy-950: hsl(229, 23%, 23%);
+  --color-gray-500: hsl(227, 10%, 46%);
+  --color-gray-100: hsl(225, 10%, 92%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-kumbh);
+  font-size: 18px;
+  background-color: var(--color-blue-600);
+  background-image:
+    url(../assets/images/bg-pattern-top.svg),
+    url(../assets/images/bg-pattern-bottom.svg);
+  background-position:
+    top -600px left -750px,
+    bottom -600px right -750px;
+  background-repeat: no-repeat;
+  background-size:
+    975px 975px,
+    975px 975px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100dvh;
+  padding: 2rem;
+}
+
+.card {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 50px 100px -20px rgba(8, 70, 94, 0.5);
+}
+
+.card__header-image {
+  display: block;
+}
+
+.card__profile {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -48px;
+  object-fit: cover;
+}
+
+.card__user-info {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.card__name {
+  color: var(--color-navy-950);
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.card__age {
+  color: var(--color-gray-500);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.card__location {
+  color: var(--color-gray-500);
+  font-size: 14px;
+}
+
+.card__divider {
+  border: none;
+  border-top: 1px solid var(--color-gray-100);
+  margin: 0;
+}
+
+.card__stats {
+  background-color: white;
+  padding: 1.5rem 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-gray-500);
+}
+
+.stats__label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.stats__value {
+  order: -1;
+  color: var(--color-navy-950);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
