@@ -1,0 +1,91 @@
+:root {
+  --font-big-shoulders: "Big Shoulders", sans-serif;
+  --font-lexend: "Lexend", sans-serif;
+
+  --color-gray-100: hsl(0, 0%, 95%);
+  --color-gold-500: hsl(31, 77%, 52%);
+  --color-cyan-800: hsl(184, 100%, 22%);
+  --color-green-950: hsl(179, 100%, 13%);
+  --color-white-transparent: hsla(0, 0%, 100%, 0.75)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-lexend);
+  background-color: var(--color-gray-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  gap: 1rem;
+}
+
+.container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 320px;
+  min-width: 300px;
+}
+
+.card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-family: var(--font-big-shoulders);
+  font-size: 2.5em;
+  color: white;
+}
+
+.card-sedans {
+  background-color: var(--color-gold-500);
+}
+
+.card-suvs {
+  background-color: var(--color-cyan-800);
+}
+
+.card-luxury {
+  background-color: var(--color-green-950);
+}
+
+.card-img {
+  width: 64px;
+  height: auto;
+}
+
+.card-description {
+  color: var(--color-white-transparent);
+  line-height: 1.6;
+}
+
+.btn {
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-size: medium;
+  align-self: flex-start;
+}
+
+.btn-sedans {
+  color: var(--color-gold-500);
+}
+
+.btn-suvs {
+  color: var(--color-cyan-800);
+}
+
+.btn-luxury {
+  color: var(--color-green-950);
+}
