@@ -38,7 +38,7 @@
       <header>
         <picture>
           <source media="(min-width: 768px)" srcset="./assets/images/image-header-desktop.jpg">
-          <img src="./assets/images/image-header-mobile.jpg"
+          <img class="card__image" src="./assets/images/image-header-mobile.jpg"
             alt="Team of professionals working together in a modern office environment with data analytics on screens">
         </picture>
       </header>
@@ -53,20 +53,20 @@
           experience, and overall efficiency.
         </p>
 
-        <section aria-labelledby="stats-heading">
-          <h2 id="stats-heading" hidden>Company Statistics</h2>
+        <section class="card__stats" aria-labelledby="stats-heading">
+          <h2 id="stats" hidden>Company Statistics</h2>
           <dl>
-            <div>
-              <dt>Companies</dt>
-              <dd>10k+</dd>
+            <div class="stats__item">
+              <dt class="stats__label">Companies</dt>
+              <dd class="stats__value">10k+</dd>
             </div>
-            <div>
-              <dt>Templates</dt>
-              <dd>314</dd>
+            <div class="stats__item">
+              <dt class="stats__label">Templates</dt>
+              <dd class="stats__value">314</dd>
             </div>
-            <div>
-              <dt>Queries</dt>
-              <dd>12m+</dd>
+            <div class="stats__item">
+              <dt class="stats__label">Queries</dt>
+              <dd class="stats__value">12m+</dd>
             </div>
           </dl>
         </section>
