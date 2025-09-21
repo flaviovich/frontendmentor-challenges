@@ -35,10 +35,27 @@ body {
   max-width: 320px;
 }
 
+.card__picture {
+  position: relative;
+}
+
+.card__picture::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--color-purple-500);
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
 .card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover
+  display: block;
+  object-fit: cover;
 }
 
 .card__content {
@@ -63,9 +80,11 @@ body {
   color: var(--color-white-paragraph);
   line-height: 1.6;
 }
-.stats{
+
+.stats {
   margin-top: 1.25rem;
 }
+
 .stats dl {
   display: flex;
   flex-direction: column;
@@ -83,6 +102,7 @@ body {
   color: var(--color-white-stat-headings);
   font-family: var(--font-lexend);
   font-size: 0.75rem;
+  letter-spacing: 2px;
 }
 
 .stats__value {
