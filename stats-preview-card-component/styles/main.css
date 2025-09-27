@@ -109,3 +109,37 @@ body {
   font-size: 1.5rem;
   font-variation-settings: 'opsz' 24, 'wght' 700;
 }
+
+.attribution {
+  color: white;
+}
+
+@media (width > 1024px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1080px;
+    height: 446px;
+  }
+
+  .card__content {
+    text-align: left;
+    padding: 4rem 1rem;
+    max-width: 45%;
+  }
+
+  .card__title {
+    font-size: 2.5rem;
+  }
+
+  .card__description {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-right: 5rem;
+  }
+
+  .stats dl {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
