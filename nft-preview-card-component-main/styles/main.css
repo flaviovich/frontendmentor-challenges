@@ -203,6 +203,14 @@ body {
   color: white;
 }
 
+@media (width>640px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --blue-950: hsl(0, 0%, 95%);
