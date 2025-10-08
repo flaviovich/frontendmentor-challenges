@@ -31,27 +31,28 @@
 <body>
 
   <main>
-    <article>
-      <figure><img src="./assets/images/illustration-hero.svg" alt=""></figure>
+    <article role="region" aria-labelledby="order-summary-heading">
+      <figure><img src="./assets/images/illustration-hero.svg"
+          alt="Persona escuchando música con auriculares y disfrutando de la experiencia"></figure>
       <section>
         <header>
-          <h1>Order Summary</h1>
+          <h1 id="order-summary-heading">Order Summary</h1>
           <p>
             You can now listen to millions of songs, audiobooks, and podcasts on any
             device anywhere you like!
           </p>
         </header>
-        <div>
-          <img src="./assets/images/icon-music.svg" alt="">
+        <div role="region" aria-label="Plan details">
+          <img src="./assets/images/icon-music.svg" alt="" aria-hidden="true">
           <div>
             <p><strong>Annual Plan</strong></p>
             <p>$59.99/year</p>
           </div>
-          <a href="">Change</a>
+          <a href="" aria-label="Change annual plan">Change</a>
         </div>
       </section>
       <footer>
-        <button>Proceed to Payment</button>
+        <button aria-describedby="order-summary-heading">Proceed to Payment</button>
         <button>Cancel Order</button>
       </footer>
     </article>
