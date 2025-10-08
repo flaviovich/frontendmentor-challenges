@@ -30,30 +30,32 @@
 
 <body>
 
-  <main>
-    <article role="region" aria-labelledby="order-summary-heading">
-      <figure><img src="./assets/images/illustration-hero.svg"
-          alt="Persona escuchando música con auriculares y disfrutando de la experiencia"></figure>
-      <section>
-        <header>
-          <h1 id="order-summary-heading">Order Summary</h1>
-          <p>
+  <main class="container">
+    <article class="card" role="region" aria-labelledby="order-summary-heading">
+      <figure class="card__figure">
+        <img class="card__image" src="./assets/images/illustration-hero.svg"
+          alt="Persona escuchando música con auriculares y disfrutando de la experiencia">
+      </figure>
+      <section class="card__content">
+        <header class="card__header">
+          <h1 class="card__title" id="order-summary-heading">Order Summary</h1>
+          <p class="card__description">
             You can now listen to millions of songs, audiobooks, and podcasts on any
             device anywhere you like!
           </p>
         </header>
-        <div role="region" aria-label="Plan details">
-          <img src="./assets/images/icon-music.svg" alt="" aria-hidden="true">
-          <div>
-            <p><strong>Annual Plan</strong></p>
-            <p>$59.99/year</p>
+        <div class="card__plan" role="region" aria-label="Plan details">
+          <img class="card__plan-icon" src="./assets/images/icon-music.svg" alt="" aria-hidden="true">
+          <div class="card__plan-details">
+            <p class="card__plan-name"><strong>Annual Plan</strong></p>
+            <p class="card__plan-price">$59.99/year</p>
           </div>
-          <a href="" aria-label="Change annual plan">Change</a>
+          <a class="card__plan-change" href="" aria-label="Change annual plan">Change</a>
         </div>
       </section>
-      <footer>
-        <button aria-describedby="order-summary-heading">Proceed to Payment</button>
-        <button>Cancel Order</button>
+      <footer class="card__footer">
+        <button class="button button--primary" aria-describedby="order-summary-heading">Proceed to Payment</button>
+        <button class="button button--secondary">Cancel Order</button>
       </footer>
     </article>
   </main>
