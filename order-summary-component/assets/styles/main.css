@@ -21,6 +21,7 @@
   --font-family: "Red Hat Display", sans-serif;
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
   --font-size-lg: 1.25rem;
   --font-size-xl: 2rem;
 
@@ -79,20 +80,22 @@ body {
 
 .card__content {
   padding: 0 var(--spacing-md);
+  margin-bottom: 0.2em;
 }
 
 .card__title {
   text-align: center;
   font-weight: 900;
   margin: var(--spacing-sm) 0;
+  font-size: 1.5rem;
 }
 
 .card__description {
   margin: var(--spacing-sm);
   text-align: center;
   color: var(--gray-600);
-  line-height: 2rem;
-  font-weight: 700;
+  line-height: 1.6rem;
+  font-weight: 500;
 }
 
 .card__plan {
@@ -115,19 +118,23 @@ body {
   gap: var(--spacing-sm);
 }
 
-.card__plan-name {
-  font-weight: 700;
+.card__plan-name strong{
+  font-size: var(--font-size-sm);
+  font-weight: 900;
 }
 
 .card__plan-price {
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
   color: var(--gray-600);
+  margin-top: 0.25em;
 }
 
 .card__plan-change {
   color: var(--blue-700);
   font-weight: 700;
   transition: color 0.2s ease;
+  font-size: var(--font-size-sm);
 }
 
 .card__plan-change:active {
@@ -140,8 +147,9 @@ body {
 }
 
 .button {
-  font-weight: 700;
-  padding: var(--spacing-sm);
+  font-size: var(--font-size-md);
+  font-weight: 900;
+  padding: 1.1em;
   width: 100%;
   border-style: none;
   cursor: pointer;
@@ -153,7 +161,8 @@ body {
   color: white;
   display: block;
   border-radius: var(--radius-sm);
-  box-shadow: 0 10px 20px var(--shadow-primary);
+  box-shadow: 0 10px 10px 5px var(--shadow-primary);
+  margin-bottom: 0.75rem;
 }
 
 .button--secondary {
