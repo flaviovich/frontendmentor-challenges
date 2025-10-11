@@ -44,7 +44,7 @@ html {
 body {
   font-family: var(--font-family);
   background-color: var(--blue-100);
-  background-image: url(../assets/images/pattern-background-mobile.svg);
+  background-image: url(../images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
@@ -86,8 +86,8 @@ body {
 .card__title {
   text-align: center;
   font-weight: 900;
-  margin: var(--spacing-sm) 0;
   font-size: 1.5rem;
+  margin: var(--spacing-sm) 0;
 }
 
 .card__description {
@@ -118,7 +118,7 @@ body {
   gap: var(--spacing-sm);
 }
 
-.card__plan-name strong{
+.card__plan-name strong {
   font-size: var(--font-size-sm);
   font-weight: 900;
 }
@@ -168,4 +168,70 @@ body {
 .button--secondary {
   color: var(--gray-600);
   background-color: transparent;
+}
+
+@media (width >480px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    max-width: 550px;
+    margin: var(--spacing-sm);
+  }
+
+  .card__content {
+    padding: 3em 3em 0;
+  }
+
+  .card__title {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+
+  .card__description {
+    font-size: 1.1em;
+  }
+
+  .card__plan {
+    padding: var(--spacing-md);
+  }
+
+  .card__plan-name strong {
+    font-size: var(--font-size-md);
+  }
+
+  .card__plan-price {
+    font-size: var(--font-size-md);
+    margin-top: 0.25em;
+  }
+  .card__plan-change {
+    font-size: var(--font-size-md);
+  }
+  .card__plan-change:hover {
+    color: var(--blue-hover);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .card__footer {
+    padding: 2em 3em 1em;
+  }
+
+  .button--primary:hover {
+    background-color: var(--blue-hover);
+  }
+
+  .button--secondary {
+    padding: var(--spacing-md) 0;
+  }
+
+  .button--secondary:hover {
+    color: var(--blue-950);
+  }
 }
