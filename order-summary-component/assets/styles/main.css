@@ -67,6 +67,7 @@ body {
 .card {
   width: 80%;
   min-width: 350px;
+  width: min(90%, 350px);
   border-radius: var(--radius-lg);
   background-color: white;
   overflow: hidden;
@@ -75,6 +76,7 @@ body {
 
 .card__image {
   width: 100%;
+  height: auto;
   display: block;
 }
 

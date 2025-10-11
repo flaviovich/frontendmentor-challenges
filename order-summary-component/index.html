@@ -31,11 +31,9 @@
 <body>
 
   <main class="container">
-    <article class="card" role="region" aria-labelledby="order-summary-heading">
-      <figure class="card__figure">
-        <img class="card__image" src="./assets/images/illustration-hero.svg"
-          alt="Persona escuchando música con auriculares y disfrutando de la experiencia">
-      </figure>
+    <article class="card" aria-labelledby="order-summary-heading">
+      <img class="card__image" src="./assets/images/illustration-hero.svg"
+        alt="Persona escuchando música con auriculares y disfrutando de la experiencia">
       <section class="card__content">
         <header class="card__header">
           <h1 class="card__title" id="order-summary-heading">Order Summary</h1>
@@ -44,7 +42,7 @@
             device anywhere you like!
           </p>
         </header>
-        <div class="card__plan" role="region" aria-label="Plan details">
+        <div class="card__plan" aria-label="Plan details">
           <div class="card__plan-details">
             <img class="card__plan-icon" src="./assets/images/icon-music.svg" alt="" aria-hidden="true">
             <div>
@@ -56,8 +54,9 @@
         </div>
       </section>
       <footer class="card__footer">
-        <button class="button button--primary" aria-describedby="order-summary-heading">Proceed to Payment</button>
-        <button class="button button--secondary">Cancel Order</button>
+        <button class="button button--primary" aria-describedby="order-summary-heading" type="button">Proceed to
+          Payment</button>
+        <button class="button button--secondary" type="button">Cancel Order</button>
       </footer>
     </article>
   </main>
