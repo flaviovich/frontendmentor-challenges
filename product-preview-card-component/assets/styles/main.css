@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-green-500: hsl(158, 36%, 37%);
+  --color-green-700: hsl(158, 42%, 18%);
+  --color-black: hsl(212, 21%, 14%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+}
+
+body {
+  background-color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  gap: 2rem;
+}
+
+.container {
+  width: 350px;
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__image-caption {
+  display: none;
+}
+
+.card__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__category {
+  text-transform: uppercase;
+  font-family: var(--font-montserrat);
+  font-size: 0.75rem;
+  color: var(--color-grey);
+  letter-spacing: 0.25rem;
+}
+
+.card__title {
+  font-family: var(--font-fraunces);
+  color: var(--color-black);
+  line-height: 1;
+}
+
+.card__description {
+  font-size: 14px;
+  font-family: var(--font-montserrat);
+  color: var(--color-grey);
+  line-height: 1.6;
+}
+
+.card__price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__price {
+  color: var(--color-green-500);
+  font-family: var(--font-fraunces);
+  font-size: 2rem;
+}
+
+.card__original-price {
+  color: var(--color-grey);
+  text-decoration: line-through;
+}
+
+.button {
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.button--primary {
+  background-color: var(--color-green-500);
+  color: var(--color-white);
+  width: 100%;
+}
+
+.button__icon {
+  background-image: url(../images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
+  display: inline-block;
+}
+
+.button__text {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
