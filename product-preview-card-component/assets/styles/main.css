@@ -22,7 +22,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
-  gap: 2rem;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 .container {
@@ -33,11 +34,13 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
   background-color: var(--color-white);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .card__image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .card__image-caption {
@@ -48,25 +51,28 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .card__header {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .card__category {
   text-transform: uppercase;
   font-family: var(--font-montserrat);
   font-size: 0.75rem;
+  font-weight: 500;
   color: var(--color-grey);
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.3rem;
 }
 
 .card__title {
   font-family: var(--font-fraunces);
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--color-black);
   line-height: 1;
 }
@@ -74,6 +80,7 @@ body {
 .card__description {
   font-size: 14px;
   font-family: var(--font-montserrat);
+  font-weight: 500;
   color: var(--color-grey);
   line-height: 1.6;
 }
@@ -88,11 +95,15 @@ body {
   color: var(--color-green-500);
   font-family: var(--font-fraunces);
   font-size: 2rem;
+  font-weight: 700;
 }
 
 .card__original-price {
   color: var(--color-grey);
   text-decoration: line-through;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .button {
@@ -113,6 +124,8 @@ body {
 
 .button__icon {
   background-image: url(../images/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 15px;
   height: 16px;
   display: inline-block;
@@ -121,4 +134,5 @@ body {
 .button__text {
   font-family: var(--font-montserrat);
   font-weight: 700;
+  font-size: 0.875rem;
 }
