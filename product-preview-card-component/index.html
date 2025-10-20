@@ -37,10 +37,15 @@
   <main class="container">
     <article class="card" itemscope itemtype="https://schema.org/Product">
       <figure class="card__image-container">
-        <img class="card__image" src="./assets/images/image-product-mobile.jpg"
-          alt="Gabrielle Essence Eau De Parfum bottle surrounded by green leaves">
+        <picture>
+          <source media="(width>= 600px)" srcset="./assets/images/image-product-desktop.jpg">
+
+          <img class="card__image" src="./assets/images/image-product-mobile.jpg"
+            alt="Gabrielle Essence Eau De Parfum bottle surrounded by green leaves">
+        </picture>
         <figcaption class="card__image-caption">Gabrielle Essence Eau De Parfum by CHANEL</figcaption>
       </figure>
+
       <div class="card__body">
         <header class="card__header">
           <p class="card__category">Perfume</p>

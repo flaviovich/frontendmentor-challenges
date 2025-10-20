@@ -136,3 +136,25 @@ body {
   font-weight: 700;
   font-size: 0.875rem;
 }
+
+@media (width>=600px) {
+  .container {
+    width: 600px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image body";
+  }
+
+  .card__image-container {
+    grid-area: image;
+  }
+
+  .card__body {
+    grid-area: body;
+  }
+
+}
