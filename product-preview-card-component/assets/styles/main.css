@@ -5,14 +5,18 @@
 }
 
 :root {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-fraunces: "Fraunces", serif;
   --color-green-500: hsl(158, 36%, 37%);
   --color-green-700: hsl(158, 42%, 18%);
   --color-black: hsl(212, 21%, 14%);
   --color-grey: hsl(228, 12%, 48%);
   --color-cream: hsl(30, 38%, 92%);
   --color-white: hsl(0, 0%, 100%);
-  --font-montserrat: "Montserrat", sans-serif;
-  --font-fraunces: "Fraunces", serif;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
 }
 
 body {
@@ -22,16 +26,19 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
-  gap: 1.5rem;
-  padding: 1rem;
+  min-height: 100vh;
+  /* Fallback */
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm);
 }
 
 .container {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
 }
 
 .card {
-  border-radius: 0.5rem;
+  border-radius: var(--spacing-xs);
   overflow: hidden;
   background-color: var(--color-white);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
@@ -48,7 +55,7 @@ body {
 }
 
 .card__body {
-  padding: 2rem;
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -57,7 +64,7 @@ body {
 .card__header {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-md);
 }
 
 .card__category {
@@ -88,7 +95,7 @@ body {
 .card__price-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-sm);
 }
 
 .card__price {
@@ -107,19 +114,29 @@ body {
 }
 
 .button {
-  padding: 1rem 0;
-  border-radius: 0.5rem;
+  padding: var(--spacing-sm) 0;
+  border-radius: var(--spacing-xs);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--spacing-xs);
 }
 
 .button--primary {
   background-color: var(--color-green-500);
   color: var(--color-white);
   width: 100%;
+}
+
+.button--primary:hover {
+  background-color: var(--color-green-700);
+  cursor: pointer;
+}
+
+.button--primary:focus {
+  outline: 2px solid var(--color-green-700);
+  outline-offset: 2px;
 }
 
 .button__icon {
@@ -137,9 +154,10 @@ body {
   font-size: 0.875rem;
 }
 
+/* Responsive breakpoint */
 @media (width>=600px) {
   .container {
-    width: 600px;
+    max-width: 600px;
   }
 
   .card {
