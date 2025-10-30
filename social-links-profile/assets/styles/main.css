@@ -1,3 +1,33 @@
+/* Inter Font */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype-variations');
+  font-weight: 400 600 700;
+  font-style: oblique -10deg 0deg;
+}
+
+/* Fallback for browsers that don't support variable fonts */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/static/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -57,25 +87,27 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .profile__name {
-  color: var(--color-white);
   font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-white);
 }
 
 .profile__location {
   color: var(--color-green);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .profile__bio {
   font-size: 14px;
+  font-weight: 400;
   color: var(--color-white);
   text-align: center;
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
 .profile__link-list {
@@ -88,12 +120,14 @@ body {
 .profile__link {
   color: var(--color-white);
   text-decoration: none;
-  background-color: var(--color-grey-700);
-  padding: var(--spacing-sm);
   text-align: center;
+  background-color: var(--color-grey-700);
+  padding: 0.8rem;
   display: block;
-  border-radius: var(--spacing-xs);
-  font-weight: 600;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 14px;
+}
 }
 
 .attribution {
