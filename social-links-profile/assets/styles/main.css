@@ -45,6 +45,7 @@
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
 }
 
 body {
@@ -131,4 +132,14 @@ body {
 
 .attribution {
   color: var(--color-white);
+}
+
+@media (width>=480px) {
+  .profile {
+    max-width: 400px;
+  }
+
+  .profile__card {
+    padding: var(--spacing-xl);
+  }
 }
