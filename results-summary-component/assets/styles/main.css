@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Typography */
+  --font-hanken: "Hanken Grotesk", sans-serif;
+  --font-size-paragraph: 18px;
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  font-family: var(--font-hanken);
+}
+
+.container {
+  width: 100%;
+}
+
+.card {}
+
+.card__result {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: 0 0 2rem 2rem;
+  overflow: hidden;
+  color: var(--light-lavender);
+  text-align: center;
+  padding: 1.5rem;
+}
+.card__result-heading{
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.card__score {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__score-value {
+  color: var(--white);
+  display: block;
+  font-size: 3.5rem;
+}
+.card__score-max{
+
+}
+.card__result-title {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.card__result-description{
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.card__summary {
+  padding: 1.5rem 2rem;
+}
+
+.card__summary-item {
+  list-style: none;
+}
+
+.card__button {
+  width: 100%;
+  background-color: var(--dark-gray-blue);
+  border: none;
+  color: var(--white);
+  border-radius: 2rem;
+  padding: 1rem 0;
+  font-weight: 800;
+  font-size: 1rem;
+}

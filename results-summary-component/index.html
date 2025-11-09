@@ -12,6 +12,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./assets/styles/main.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -44,13 +48,14 @@
   <main class="container">
     <article class="card" aria-labelledby="result-heading">
       <section class="card__result" aria-labelledby="result-heading" aria-describedby="result-description">
-        <h2 id="result-heading">Your Result</h2>
+        <h2 id="result-heading" class="card__result-heading">Your Result</h2>
         <div class="card__score" role="status" aria-live="polite" aria-atomic="true">
           <strong class="card__score-value">76</strong>
           <span class="card__score-max">of 100</span>
         </div>
         <h3 class="card__result-title">Great</h3>
-        <p id="result-description" class="card__result-description">You scored higher than 65% of the people who have taken these tests.</p>
+        <p id="result-description" class="card__result-description">You scored higher than 65% of the people who have
+          taken these tests.</p>
       </section>
 
       <section class="card__summary" aria-labelledby="summary-heading">
