@@ -61,25 +61,45 @@
       <section class="card__summary" aria-labelledby="summary-heading">
         <h3 id="summary-heading" class="card__summary-title">Summary</h3>
         <ul class="card__summary-list" role="list" aria-label="Test score breakdown">
-          <li class="card__summary-item" role="listitem">
-            <img class="card__summary-icon" src="./assets/images/icon-reaction.svg" alt="" aria-hidden="true">
-            <span class="card__summary-label">Reaction</span>
-            <span class="card__summary-value"><span class="sr-only">Score: </span>80 / 100</span>
+          <li class="card__summary-item card__summary-item--reaction" role="listitem">
+            <div class="card__summary-item-group">
+              <img class="card__summary-icon" src="./assets/images/icon-reaction.svg" alt="" aria-hidden="true">
+              <span class="card__summary-label">Reaction</span>
+            </div>
+            <div class="card__summary-score">
+              <span class="card__summary-score-current">80</span>&nbsp;
+              <span class="card__summary-score-total"> / 100</span>
+            </div>
           </li>
-          <li class="card__summary-item" role="listitem">
-            <img class="card__summary-icon" src="./assets/images/icon-memory.svg" alt="" aria-hidden="true">
-            <span class="card__summary-label">Memory</span>
-            <span class="card__summary-value"><span class="sr-only">Score: </span>92 / 100</span>
+          <li class="card__summary-item card__summary-item--memory" role="listitem">
+            <div class="card__summary-item-group">
+              <img class="card__summary-icon" src="./assets/images/icon-memory.svg" alt="" aria-hidden="true">
+              <span class="card__summary-label">Memory</span>
+            </div>
+            <div class="card__summary-score">
+              <span class="card__summary-score-current">92</span>&nbsp;
+              <span class="card__summary-score-total"> / 100</span>
+            </div>
           </li>
-          <li class="card__summary-item" role="listitem">
-            <img class="card__summary-icon" src="./assets/images/icon-verbal.svg" alt="" aria-hidden="true">
-            <span class="card__summary-label">Verbal</span>
-            <span class="card__summary-value"><span class="sr-only">Score: </span>61 / 100</span>
+          <li class="card__summary-item card__summary-item--verbal" role="listitem">
+            <div class="card__summary-item-group">
+              <img class="card__summary-icon" src="./assets/images/icon-verbal.svg" alt="" aria-hidden="true">
+              <span class="card__summary-label">Verbal</span>
+            </div>
+            <div class="card__summary-score">
+              <span class="card__summary-score-current">61</span>&nbsp;
+              <span class="card__summary-score-total"> / 100</span>
+            </div>
           </li>
-          <li class="card__summary-item" role="listitem">
-            <img class="card__summary-icon" src="./assets/images/icon-visual.svg" alt="" aria-hidden="true">
-            <span class="card__summary-label">Visual</span>
-            <span class="card__summary-value"><span class="sr-only">Score: </span>72 / 100</span>
+          <li class="card__summary-item card__summary-item--visual" role="listitem">
+            <div class="card__summary-item-group">
+              <img class="card__summary-icon" src="./assets/images/icon-visual.svg" alt="" aria-hidden="true">
+              <span class="card__summary-label">Visual</span>
+            </div>
+            <div class="card__summary-score">
+              <span class="card__summary-score-current">73</span>&nbsp;
+              <span class="card__summary-score-total"> / 100</span>
+            </div>
           </li>
         </ul>
         <button class="card__button card__button--primary" aria-label="Continue to next section">Continue</button>
