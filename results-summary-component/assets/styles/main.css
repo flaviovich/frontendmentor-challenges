@@ -33,8 +33,6 @@ body {
   width: 100%;
 }
 
-.card {}
-
 .card__result {
   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
   border-radius: 0 0 2rem 2rem;
@@ -66,8 +64,6 @@ body {
   display: block;
   font-size: 3.5rem;
 }
-
-.card__score-max {}
 
 .card__result-title {
   color: var(--white);
@@ -146,12 +142,14 @@ body {
 }
 
 .card__summary-score {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1rem;
 }
 
 .card__summary-score-total {
-  color: var(--light-lavender);
+  color: var(--dark-gray-blue);
+  opacity: 0.5;
+  font-weight: 800;
 }
 
 .card__button {
@@ -160,7 +158,12 @@ body {
   border: none;
   color: var(--white);
   border-radius: 2rem;
-  padding: 1rem 0;
-  font-weight: 800;
-  font-size: 1rem;
+  padding: 1.1rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.card__button:hover {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  cursor: pointer;
 }
