@@ -27,6 +27,7 @@
 
 body {
   font-family: var(--font-hanken);
+  background-color: var(--pale-blue);
 }
 
 .container {
@@ -80,6 +81,7 @@ body {
 .card__summary {
   padding: 1.5rem 2rem;
   color: var(--dark-gray-blue);
+  background-color: var(--white);
 }
 
 .card__summary-list {
@@ -166,4 +168,31 @@ body {
 .card__button:hover {
   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.card {
+    max-width: 736px;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 30px 60px rgba(61, 108, 236, 0.15);
+  }
+
+  .card__result,
+  .card__summary {
+    flex: 1;
+  }
+
+  .card__result {
+    border-radius: 2rem;
+  }
 }
