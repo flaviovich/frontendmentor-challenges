@@ -34,6 +34,10 @@ body {
   width: 100%;
 }
 
+.card {
+  background-color: var(--white);
+}
+
 .card__result {
   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
   border-radius: 0 0 2rem 2rem;
@@ -178,7 +182,7 @@ body {
     height: 100vh;
   }
 
-.card {
+  .card {
     max-width: 736px;
     width: 100%;
     border-radius: 2rem;
@@ -187,12 +191,53 @@ body {
     box-shadow: 0 30px 60px rgba(61, 108, 236, 0.15);
   }
 
+  .card__result {
+    /* background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue)); */
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+
   .card__result,
   .card__summary {
     flex: 1;
   }
 
-  .card__result {
-    border-radius: 2rem;
+  .card__result-heading {
+    font-size: 1.5rem;
+  }
+
+  .card__score {
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+  }
+
+  .card__score-value {
+    font-weight: 800;
+    font-size: 4rem;
+  }
+
+  .card__score-max {
+    color: var(--light-lavender);
+    opacity: 0.5;
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  .card__result-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .card__result-description {
+    font-size: 1.1rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  .card__summary {
+    padding: 2.5rem;
+  }
+  .card__summary-title{
+    font-size: 2rem;
   }
 }
