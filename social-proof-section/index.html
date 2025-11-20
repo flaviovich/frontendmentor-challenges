@@ -23,91 +23,101 @@
 </head>
 
 <body>
-  <main>
-    <section aria-labelledby="main-heading">
-      <header>
-        <h1 id="main-heading">10,000+ of our users love our products.</h1>
-        <p>
+  <main class="social-proof">
+    <!-- ==================== HEADER ==================== -->
+    <section class="social-proof__header" aria-labelledby="social-proof__title">
+      <div class="social-proof__header-content">
+        <h1 id="social-proof__title" class="social-proof__title">
+          10,000+ of our users love our products.
+        </h1>
+        <p class="social-proof__description">
           We only provide great products combined with excellent customer service.
           See what our satisfied customers are saying about our services.
         </p>
-      </header>
+      </div>
 
-      <ul role="list" aria-label="Ratings on different platforms">
-        <li role="listitem">
+      <ul class="social-proof__ratings" role="list" aria-label="Ratings on different platforms">
+        <li class="social-proof__rating">
           <div class="stars" aria-label="5 of 5 stars">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
           </div>
-          <span>Rated 5 Stars in Reviews</span>
+          <span class="social-proof__rating-text">Rated 5 Stars in Reviews</span>
         </li>
-        <li role="listitem">
+
+        <li class="social-proof__rating social-proof__rating--middle">
           <div class="stars" aria-label="5 of 5 stars">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
           </div>
-          <span>Rated 5 Stars in Report Guru</span>
+          <span class="social-proof__rating-text">Rated 5 Stars in Report Guru</span>
         </li>
-        <li role="listitem">
+
+        <li class="social-proof__rating social-proof__rating--last">
           <div class="stars" aria-label="5 of 5 stars">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
-            <img src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
+            <img class="stars__icon" src="./assets/images/icon-star.svg" alt="" width="16" height="16">
           </div>
-          <span>Rated 5 Stars in BestTech</span>
+          <span class="social-proof__rating-text">Rated 5 Stars in BestTech</span>
         </li>
       </ul>
     </section>
 
-    <section aria-labelledby="testimonials-heading">
-      <h2 id="testimonials-heading" class="sr-only">Customer Testimonials</h2>
-      <ul role="list" aria-label="Verified Customer Testimonials">
-        <li>
-          <figure>
-            <img src="./assets/images/image-colton.jpg" alt="Profile photo of Colton Smith" width="40" height="40">
-            <figcaption>
-              <p><strong>Colton Smith</strong></p>
-              <p class="verified">Verified Buyer</p>
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title" class="sr-only">Customer Testimonials</h2>
+
+      <ul class="testimonials__list" role="list" aria-label="Verified Customer Testimonials">
+        <li class="card">
+          <figure class="card__customer">
+            <img class="card__avatar" src="./assets/images/image-colton.jpg" alt="Profile photo of Colton Smith" width="40" height="40">
+            <figcaption class="card__customer-info">
+              <p class="card__name"><strong>Colton Smith</strong></p>
+              <p class="card__status">Verified Buyer</p>
             </figcaption>
           </figure>
-          <blockquote cite="">
+
+          <blockquote class="card__quote">
             <p>“We needed the same printed design as the one we had ordered a week prior.
             Not only did they find the original order, but we also received it in time.
             Excellent!”</p>
           </blockquote>
         </li>
 
-        <li>
-          <figure>
-            <img src="./assets/images/image-irene.jpg" alt="Profile photo of Irene Roberts" width="40" height="40">
-            <figcaption>
-              <p><strong>Irene Roberts</strong></p>
-              <p class="verified">Verified Buyer</p>
+        <li class="card card--middle">
+          <figure class="card__customer">
+            <img class="card__avatar" src="./assets/images/image-irene.jpg" alt="Profile photo of Irene Roberts" width="40" height="40">
+            <figcaption class="card__customer-info">
+              <p class="card__name"><strong>Irene Roberts</strong></p>
+              <p class="card__status">Verified Buyer</p>
             </figcaption>
           </figure>
-          <blockquote>
+
+          <blockquote class="card__quote">
             <p>“Customer service is always excellent and very quick turn around. Completely
             delighted with the simplicity of the purchase and the speed of delivery.”</p>
           </blockquote>
         </li>
 
-        <li>
-          <figure>
-            <img src="./assets/images/image-anne.jpg" alt="Profile photo of Anne Wallace" width="40" height="40">
-            <figcaption>
-              <p><strong>Anne Wallace</strong></p>
-              <p class="verified">Verified Buyer</p>
+        <li class="card card--last">
+          <figure class="card__customer">
+            <img class="card__avatar" src="./assets/images/image-anne.jpg" alt="Profile photo of Anne Wallace" width="40" height="40">
+            <figcaption class="card__customer-info">
+              <p class="card__name"><strong>Anne Wallace</strong></p>
+              <p class="card__status">Verified Buyer</p>
             </figcaption>
           </figure>
-          <blockquote>
+
+          <blockquote class="card__quote">
             <p>“Put an order with this company and can only praise them for the very high
             standard. Will definitely use them again and recommend them to everyone!”</p>
           </blockquote>
@@ -119,12 +129,11 @@
   <footer>
     <div class="attribution" role="contentinfo">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
       Coded by <a href="https://www.linkedin.com/in/flavio-rios-nieto/" rel="noopener">Flavio Rios</a>.
     </div>
   </footer>
 
-  <!-- Helper class for screen readers -->
   <style>
     .sr-only {
       position: absolute;
