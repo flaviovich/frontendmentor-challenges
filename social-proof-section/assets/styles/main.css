@@ -158,12 +158,27 @@ body {
   .social-proof__title {
     font-size: 4rem;
     font-weight: var(--fw-bold);
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
   }
 
   .rated-list__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.2rem 0;
+  }
+
+  .rated-list__item--offset-1 {
+    margin-right: 6rem;
+  }
+
+  .rated-list__item--offset-2 {
+    margin: 0 3rem;
+  }
+
+  .rated-list__item--offset-3 {
+    margin-left: 6rem;
   }
 
   .rated-list__stars {
@@ -171,11 +186,35 @@ body {
     margin: 0;
     padding: 0 4rem;
   }
-.rated-list__text{
-  text-align: left;
-  width: 60%;
-}
+
+  .rated-list__text {
+    text-align: left;
+    width: 60%;
+  }
+
   .testimonials__list {
     flex-direction: row;
+    gap: 2rem;
+  }
+
+  .testimonials__card {
+    padding: 2rem;
+  }
+
+  .testimonials__card--offset-1 {
+    margin-bottom: 2rem;
+  }
+
+  .testimonials__card--offset-2 {
+    margin: 1rem 0;
+  }
+
+  .testimonials__card--offset-3 {
+    margin-top: 2rem;
+  }
+
+  .testimonials__quote p {
+    line-height: 1.5;
+    font-weight: var(--fw-medium);
   }
 }
