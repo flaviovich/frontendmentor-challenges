@@ -1,4 +1,35 @@
-.eyebrow {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Typography */
+  --font-poppins: "Poppins", sans-serif;
+  /* Primary Colors */
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  /* Neutral Colors */
+  --color-grey-500: hsl(234, 12%, 34%);
+  --color-grey-400: hsl(212, 6%, 44%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 15px;
+  font-family: var(--font-poppins);
+}
+
+body {
+  background-color: #fafafa;
+  width: 85%;
+  margin: 4rem auto 2rem;
+}
+
+.header__eyebrow {
   color: var(--color-grey-500);
   font-weight: 500;
   letter-spacing: 3px;
@@ -16,11 +47,11 @@
   white-space: nowrap;
 }
 
-.attribution {
+.footer__attribution {
   font-size: 11px;
   text-align: center;
 }
 
-.attribution a {
+.footer__attribution a {
   color: hsl(228, 45%, 44%);
 }
