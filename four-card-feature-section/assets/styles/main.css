@@ -25,13 +25,15 @@ html {
 
 body {
   background-color: #fafafa;
-  width: 80%;
+  width: 83%;
   margin: 4rem auto 2rem;
 }
+
 .header {
   text-align: center;
   margin-bottom: 3rem;
 }
+
 .header__eyebrow {
   font-size: 1.5rem;
   font-weight: 200;
@@ -52,6 +54,59 @@ body {
   font-weight: 400;
   color: var(--color-grey-400);
   /* letter-spacing: 0.075rem; */
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 2rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card--cyan {
+  border-top: 4px solid var(--color-cyan);
+}
+
+.card--red {
+  border-top: 4px solid var(--color-red);
+}
+
+.card--orange {
+  border-top: 4px solid var(--color-orange);
+}
+
+.card--blue {
+  border-top: 4px solid var(--color-blue);
+}
+
+.card__header {
+  margin-bottom: 0.5rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-grey-500);
+}
+
+.card__description {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-grey-400);
+  /* margin-bottom: 2rem; */
+}
+
+.card__icon {
+  float: right;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .visually-hidden {
