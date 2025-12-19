@@ -1,7 +1,112 @@
-.eyebrow {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Typography */
+  --font-poppins: "Poppins", sans-serif;
+  /* Primary Colors */
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  /* Neutral Colors */
+  --color-grey-500: hsl(234, 12%, 34%);
+  --color-grey-400: hsl(212, 6%, 44%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 15px;
+  font-family: var(--font-poppins);
+}
+
+body {
+  background-color: #fafafa;
+  width: 83%;
+  margin: 4rem auto 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header__eyebrow {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--color-grey-400);
+  letter-spacing: 0.05rem;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--color-grey-500);
-  font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 0.075rem;
+  margin-bottom: 1rem;
+}
+
+.header__description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-grey-400);
+  /* letter-spacing: 0.075rem; */
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 2rem 2.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 15px 30px -10px rgba(131, 166, 210, 0.25);
+}
+
+.card--cyan {
+  border-top: 4px solid var(--color-cyan);
+}
+
+.card--red {
+  border-top: 4px solid var(--color-red);
+}
+
+.card--orange {
+  border-top: 4px solid var(--color-orange);
+}
+
+.card--blue {
+  border-top: 4px solid var(--color-blue);
+}
+
+.card__header {
+  margin-bottom: 0.5rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-grey-500);
+}
+
+.card__description {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-grey-400);
+}
+
+.card__icon {
+  display: block;
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .visually-hidden {
@@ -16,11 +121,11 @@
   white-space: nowrap;
 }
 
-.attribution {
+.footer__attribution {
   font-size: 11px;
   text-align: center;
 }
 
-.attribution a {
+.footer__attribution a {
   color: hsl(228, 45%, 44%);
 }
