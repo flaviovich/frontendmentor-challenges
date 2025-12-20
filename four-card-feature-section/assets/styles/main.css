@@ -135,6 +135,10 @@ body {
     margin: 6.5rem auto;
   }
 
+  .header {
+    margin-bottom: 4.5rem;
+  }
+
   .header__eyebrow,
   .header__title {
     font-size: 2.5rem;
@@ -150,5 +154,31 @@ body {
     width: 50%;
     margin: 0 auto;
     line-height: 1.2;
+  }
+
+  .tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2.25rem;
+    align-items: center;
+  }
+
+  .card {
+    padding: 2.25rem;
+  }
+
+  .card--cyan {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .card--blue {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .card__description {
+    letter-spacing: 0.5px;
   }
 }
