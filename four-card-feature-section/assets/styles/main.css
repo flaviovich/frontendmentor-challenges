@@ -129,3 +129,10 @@ body {
 .footer__attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media (width>=1440px) {
+  body {
+    width: 80%;
+    margin: 6.5rem auto;
+  }
+}
