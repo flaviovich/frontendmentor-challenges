@@ -32,6 +32,7 @@
 html {
   font-size: 15px;
   font-family: var(--font-poppins);
+  scroll-behavior: smooth;
 }
 
 body {
