@@ -16,6 +16,17 @@
   --color-grey-500: hsl(234, 12%, 34%);
   --color-grey-400: hsl(212, 6%, 44%);
   --color-white: hsl(0, 0%, 100%);
+   /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
 }
 
 html {
@@ -26,12 +37,12 @@ html {
 body {
   background-color: #fafafa;
   width: 83%;
-  margin: 4rem auto 2rem;
+  margin: var(--space-xxl) auto var(--space-lg);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-xl);
 }
 
 .header__eyebrow {
@@ -46,7 +57,7 @@ body {
   font-weight: 600;
   color: var(--color-grey-500);
   letter-spacing: 0.075rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .header__description {
@@ -58,14 +69,14 @@ body {
 .tools {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 1rem;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 .card {
   background-color: var(--color-white);
-  padding: 2rem 2.25rem;
-  border-radius: 0.5rem;
+  padding: var(--space-lg) 2.25rem;
+  border-radius: var(--radius-md);
   box-shadow: 0 15px 30px -10px rgba(131, 166, 210, 0.25);
 }
 
@@ -86,7 +97,7 @@ body {
 }
 
 .card__header {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .card__title {
@@ -104,8 +115,8 @@ body {
 .card__icon {
   display: block;
   margin-left: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 .visually-hidden {
