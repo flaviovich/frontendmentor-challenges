@@ -16,22 +16,34 @@
   --color-grey-500: hsl(234, 12%, 34%);
   --color-grey-400: hsl(212, 6%, 44%);
   --color-white: hsl(0, 0%, 100%);
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
 }
 
 html {
   font-size: 15px;
   font-family: var(--font-poppins);
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #fafafa;
   width: 83%;
-  margin: 4rem auto 2rem;
+  margin: var(--space-xxl) auto var(--space-lg);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-xl);
 }
 
 .header__eyebrow {
@@ -46,7 +58,7 @@ body {
   font-weight: 600;
   color: var(--color-grey-500);
   letter-spacing: 0.075rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .header__description {
@@ -58,14 +70,14 @@ body {
 .tools {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 1rem;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 .card {
   background-color: var(--color-white);
-  padding: 2rem 2.25rem;
-  border-radius: 0.5rem;
+  padding: var(--space-lg) 2.25rem;
+  border-radius: var(--radius-md);
   box-shadow: 0 15px 30px -10px rgba(131, 166, 210, 0.25);
 }
 
@@ -86,7 +98,7 @@ body {
 }
 
 .card__header {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .card__title {
@@ -104,8 +116,8 @@ body {
 .card__icon {
   display: block;
   margin-left: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 .visually-hidden {
@@ -127,6 +139,95 @@ body {
 
 .footer__attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (width> 375px) {
+  body {
+    width: 85%;
+    margin: 3rem auto;
+  }
+
+  .header__eyebrow,
+  .header__title {
+    font-size: 2rem;
+  }
+
+  .header__description {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .tools {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Reorganizar cards para tablets */
+  .card--cyan {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card--red {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .card--orange {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card--blue {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (width>=1024px) {
+  body {
+    width: 85%;
+    margin: 4rem auto 3rem;
+  }
+
+  .header__eyebrow,
+  .header__title {
+    font-size: 2.2rem;
+  }
+
+  .header__description {
+    width: 60%;
+  }
+
+  .tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card--cyan {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .card--red {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .card--orange {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .card--blue {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
 }
 
 @media (width>=1440px) {
