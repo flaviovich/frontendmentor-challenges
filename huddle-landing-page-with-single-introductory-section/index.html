@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="./assets/styles/main.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -32,24 +33,29 @@
 </head>
 
 <body>
-  <header role="banner">
-    <div><img src="./assets/images/logo.svg" alt="Huddle logo"></div>
-    <div><img src="./assets/images/illustration-mockups.svg"
+  <header class="huddle-header" role="banner">
+    <div class="huddle-header__logo"><img src="./assets/images/logo.svg" alt="Huddle logo"></div>
+    <div class="huddle-header__mockups"><img src="./assets/images/illustration-mockups.svg"
         alt="Screen mockups illustration showing community features"></div>
   </header>
 
-  <main role="main">
-    <section>
-      <h1>Build The Community Your Fans Will Love</h1>
-      <p>
+  <main class="huddle-main" role="main">
+    <section class="huddle-content">
+      <h1 class="huddle-content__title">Build The Community Your Fans Will Love</h1>
+      <p class="huddle-content__description">
         Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
         Create connections with your users as you engage in genuine discussion.
       </p>
-      <button type="button">Register</button>
+      <button class="btn btn--primary btn--hover" type="button">Register</button>
     </section>
   </main>
 
-  <footer role="contentinfo">
+  <footer class="huddle-footer" role="contentinfo">
+    <div class="huddle-social">
+      <a href="#" class="huddle-social__link huddle-social__link--facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="huddle-social__link huddle-social__link--twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="huddle-social__link huddle-social__link--instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://www.frontendmentor.io/profile/flaviovich">Flavio Rios</a>.
