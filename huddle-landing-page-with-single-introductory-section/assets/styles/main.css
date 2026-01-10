@@ -102,3 +102,24 @@ body {
 .huddle-main {
   margin-bottom: var(--space-3xl);
 }
+
+.huddle-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.huddle-social__link {
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  padding: var(--space-sm);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-white);
+}
