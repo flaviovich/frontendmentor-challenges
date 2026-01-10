@@ -18,6 +18,7 @@
   --space-lg: 2rem;
   --space-xl: 3rem;
   --space-xxl: 4rem;
+  --space-3xl: 8rem;
   /* Border radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
@@ -40,4 +41,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
+}
+
+.huddle-header__logo, .huddle-header__mockups {
+  margin-bottom: var(--space-3xl);
 }
