@@ -37,10 +37,6 @@ body {
   width: 80%;
   margin: 0 auto;
   background-color: var(--color-purple-700);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100dvh;
   min-height: 100vh;
   background-image: url(../images/bg-mobile.svg);
@@ -48,12 +44,16 @@ body {
   background-size: contain;
   background-position: top;
 }
-
-.huddle-header__logo, .huddle-header__mockups {
+.huddle-header{
+  margin-top: var(--space-2xl);
+}
+.huddle-header__logo {
   margin-bottom: var(--space-3xl);
 }
-
-.huddle-header__mockups img {
+.huddle-mockup{
+  margin-bottom: var(--space-3xl);
+}
+.huddle-mockup img {
   width: 100%;
 }
 
@@ -64,7 +64,8 @@ body {
   text-align: center;
 }
 
-.huddle-content__title, .huddle-content__description {
+.huddle-content__title,
+.huddle-content__description {
   color: var(--color-white);
 }
 
@@ -131,4 +132,27 @@ body {
   font-size: 11px;
   text-align: center;
   color: var(--color-white);
+}
+
+@media (width>=1280px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    width: 90%;
+    max-width: 1440px;
+  }
+
+  .huddle-header__logo {
+    width: 100%;
+    margin-bottom: var(--space-xl);
+  }
+
+  .huddle-header__logo img {
+    display: block;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .huddle-main {
+    display: flex;
+  }
 }
