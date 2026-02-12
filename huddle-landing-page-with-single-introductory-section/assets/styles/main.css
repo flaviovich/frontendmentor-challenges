@@ -12,9 +12,10 @@
   /* Typography */
   --font-poppins: "Poppins", sans-serif;
   --font-open-sans: "Open Sans", sans-serif;
-  --font-title-size: clamp(3rem, 4vw, 1.5rem);
-  --font-description-size: clamp(2rem, 2vw, 1rem);
-  --font-button-size: clamp(1.5rem, 2vw, 1rem);
+  --font-title-size: clamp(1.5rem, 3rem - 1vw, 3rem);
+  --font-description-size: clamp(1.15rem, 2.5rem - 2vw, 2.5rem);
+  --font-button-size: clamp(1.2rem, 2rem - 1vw, 2rem);
+
   /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -34,25 +35,38 @@
 body {
   font-family: var(--font-open-sans);
   font-weight: 400;
-  width: 80%;
-  margin: 0 auto;
-  background-color: var(--color-purple-700);
-  min-height: 100dvh;
-  min-height: 100vh;
   background-image: url(../images/bg-mobile.svg);
+  background-color: var(--color-purple-700);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
-.huddle-header{
-  margin-top: var(--space-2xl);
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-.huddle-header__logo {
+
+.huddle-header {
+  margin-bottom: 7.15rem;
+}
+.huddle-header__logo img {
+  width: 258px;
+}
+
+.huddle-main {
+  margin-bottom: 8rem;
+}
+
+.huddle-mockup {
   margin-bottom: var(--space-3xl);
 }
-.huddle-mockup{
-  margin-bottom: var(--space-3xl);
-}
+
 .huddle-mockup img {
   width: 100%;
 }
@@ -60,7 +74,6 @@ body {
 .huddle-content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
   text-align: center;
 }
 
@@ -72,15 +85,16 @@ body {
 .huddle-content__title {
   font-family: var(--font-poppins);
   font-weight: 600;
-  font-size: var(--font-title-size);
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
 }
 
 .huddle-content__description {
   font-family: var(--font-open-sans);
   font-weight: 400;
-  font-size: var(--font-description-size);
+  font-size: 1.9rem;
   line-height: 1.6;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 3rem;
 }
 
 .btn {
@@ -98,14 +112,10 @@ body {
 
 .btn--large {
   border-radius: var(--radius-2xl);
-  padding: var(--space-md) 0;
+  padding: 1.4rem 0;
   font-family: var(--font-poppins);
-  font-size: var(--font-button-size);
+  font-size: 1.4rem;
   font-weight: 400;
-}
-
-.huddle-main {
-  margin-bottom: var(--space-3xl);
 }
 
 .huddle-social {
@@ -119,13 +129,16 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--space-2xl);
-  height: var(--space-2xl);
+  width: 3.5rem;
+  height: 3.5rem;
   border: 2px solid var(--color-white);
   border-radius: 50%;
-  /* padding: var(--space-sm); */
   color: var(--color-white);
   text-decoration: none;
+}
+
+.huddle-social__link i {
+  font-size: 1.5rem;
 }
 
 .attribution {
@@ -137,22 +150,80 @@ body {
 @media (width>=1280px) {
   body {
     background-image: url(../images/bg-desktop.svg);
+    background-position: left;
+    min-height: 100vh;
+  }
+
+  .container {
     width: 90%;
     max-width: 1440px;
   }
 
-  .huddle-header__logo {
-    width: 100%;
-    margin-bottom: var(--space-xl);
+  .huddle-header {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
   }
 
   .huddle-header__logo img {
-    display: block;
-    max-width: 220px;
-    height: auto;
+    width: 220px;
   }
 
   .huddle-main {
     display: flex;
+    gap: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .huddle-mockup {
+    margin-bottom: 0;
+  }
+
+  .huddle-content {
+    width: 40%;
+    padding-top: 2.68rem;
+    text-align: left;
+  }
+
+  .huddle-content__title {
+    font-size: 2.4rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .huddle-content__description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1.55rem;
+  }
+
+  .btn {
+    margin: 0;
+  }
+
+  .btn--small {
+    padding: 0.95rem 0;
+    font-size: 1.1rem;
+    width: 40%;
+  }
+
+  .huddle-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .huddle-social {
+    gap: var(--space-sm);
+  }
+
+  .huddle-social__link {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--color-white);
+    padding: var(--space-xs);
+  }
+
+  .huddle-social__link i {
+    font-size: var(--fa-font-size-xl) !important;
   }
 }
