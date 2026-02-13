@@ -12,9 +12,6 @@
   /* Typography */
   --font-poppins: "Poppins", sans-serif;
   --font-open-sans: "Open Sans", sans-serif;
-  --font-title-size: clamp(1.5rem, 3rem - 1vw, 3rem);
-  --font-description-size: clamp(1.15rem, 2.5rem - 2vw, 2.5rem);
-  --font-button-size: clamp(1.2rem, 2rem - 1vw, 2rem);
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -25,10 +22,7 @@
   --space-2xl: 4rem;
   --space-3xl: 7rem;
   /* Border radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-xl: 2rem;
+  --radius-full: 50%;
   --radius-2xl: 3rem;
 }
 
@@ -55,6 +49,7 @@ body {
 .huddle-header {
   margin-bottom: 7.15rem;
 }
+
 .huddle-header__logo img {
   width: 258px;
 }
@@ -98,21 +93,21 @@ body {
 }
 
 .btn {
-  width: 70%;
-  margin: 0 auto;
   border: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .btn--primary {
   background-color: var(--color-white);
   color: var(--color-purple-700);
-  cursor: pointer;
-  transition: all .3s ease-in-out;
 }
 
 .btn--large {
+  width: 70%;
+  margin: 0 auto;
   border-radius: var(--radius-2xl);
-  padding: 1.4rem 0;
+  padding-block: 1.4rem;
   font-family: var(--font-poppins);
   font-size: 1.4rem;
   font-weight: 400;
@@ -132,7 +127,7 @@ body {
   width: 3.5rem;
   height: 3.5rem;
   border: 2px solid var(--color-white);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   color: var(--color-white);
   text-decoration: none;
 }
@@ -196,14 +191,17 @@ body {
     margin-bottom: 1.55rem;
   }
 
-  .btn {
+  .btn--small {
+    padding-block: 0.95rem;
+    font-size: 1.1rem;
+    width: 40%;
+    min-width: 200px;
     margin: 0;
   }
 
-  .btn--small {
-    padding: 0.95rem 0;
-    font-size: 1.1rem;
-    width: 40%;
+  .btn--hover:hover {
+    background-color: var(--color-magenta-400);
+    color: var(--color-white);
   }
 
   .huddle-footer {
@@ -221,9 +219,15 @@ body {
     height: 2.5rem;
     border: 1px solid var(--color-white);
     padding: var(--space-xs);
+    transition: all 0.3s ease;
+  }
+
+  .huddle-social__link:hover {
+    border-color: var(--color-magenta-400);
+    color: var(--color-magenta-400);
   }
 
   .huddle-social__link i {
-    font-size: var(--fa-font-size-xl) !important;
+    font-size: 1.2rem;
   }
 }
