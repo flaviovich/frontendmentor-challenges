@@ -80,13 +80,13 @@ body {
 .preparation-time__title {
   color: var(--color-rose-800);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1rem;
 }
 
 .preparation-time__list {
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
   list-style-type: square;
   color: var(--color-rose-800);
   line-height: 1.5;
@@ -94,7 +94,7 @@ body {
 }
 
 .preparation-time__item {
-  padding-left: 1rem;
+  padding-left: 1.2rem;
   line-height: 1.45;
 }
 
@@ -106,12 +106,14 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.preparation-time__label {
-  color: var(--color-stone-900);
+.preparation-time__label,
+.preparation-time__value,
+.instructions__label {
+  color: var(--color-stone-600);
 }
 
-.preparation-time__value {
-  color: var(--color-stone-600);
+.instructions__label {
+  font-weight: 700;
 }
 
 .ingredients {
@@ -130,16 +132,20 @@ body {
 
 .ingredients__list,
 .instructions__list {
-  padding-left: 1.2rem;
   list-style-type: square;
   color: var(--color-brown-800);
+  padding-left: 1.5rem;
   line-height: 1.5;
   font-size: 1.05rem;
 }
 
+.instructions__list {
+  list-style-type: decimal;
+  font-weight: 700;
+}
+
 .ingredients__item,
 .instructions__item {
-  color: var(--color-stone-600);
   padding-left: 1rem;
   line-height: 1.5;
   margin-bottom: 0.4rem;
@@ -149,20 +155,24 @@ body {
   font-size: 0.65em;
 }
 
+.ingredients__value,
+.instructions__value {
+  color: var(--color-stone-600);
+  font-weight: 400;
+}
+
 .recipe__divider {
   border: none;
   border-top: 1px solid var(--color-stone-150);
   margin-block: 1.65rem;
 }
 
-.instructions__list {
-  list-style-type: decimal;
-}
 .nutrition__description {
   color: var(--color-stone-600);
   line-height: 1.5;
   margin-bottom: 1rem;
 }
+
 .nutrition__table {
   width: 100%;
   border-collapse: collapse;
@@ -174,7 +184,7 @@ body {
 
 .nutrition__label {
   color: var(--color-stone-600);
-  padding: 0.75rem 0 0.75rem 2rem;
+  padding: 0.75rem 0.5rem 0.75rem 2rem;
   font-weight: 400;
 }
 
