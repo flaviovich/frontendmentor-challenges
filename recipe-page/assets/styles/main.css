@@ -202,3 +202,58 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media (width>=768px) {
+  body {
+    background-color: var(--color-stone-100);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 735px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
+
+  .recipe {
+    padding: 2.5rem;
+    background-color: var(--color-white);
+  }
+
+  .recipe__image {
+    border-radius: 1rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .recipe__content {
+    padding: 0;
+  }
+
+  .recipe__title {
+    font-size: 2.6rem;
+    letter-spacing: -0.9px;
+  }
+
+  .preparation-time {
+    padding-block: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .preparation-time__title {
+    line-height: 1;
+  }
+
+  .nutrition__description {
+    margin-bottom: 0.8rem;
+  }
+
+  .nutrition__label,
+  .nutrition__value {
+    padding-block: 0.85rem;
+  }
+}
