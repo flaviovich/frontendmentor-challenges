@@ -33,10 +33,97 @@
 
   --font-young-serif: "Young Serif", serif;
   --font-outfit: "Outfit", sans-serif;
+
+
+  /* WCAG 2.4.11 – Focus Appearance: consistent focus token */
+  --focus-outline-color: hsl(228, 60%, 40%);
+  --focus-outline-width: 3px;
+  --focus-outline-offset: 3px;
 }
 
 body {
   font-family: var(--font-outfit);
+}
+
+/* ─────────────────────────────────────────────────────────
+   WCAG 1.3.1 / 2.4.12 – Visually hidden utility
+   Hides content visually while keeping it accessible to AT
+   ───────────────────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   WCAG 2.4.1 – Bypass Blocks: skip-to-content link
+   ───────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-stone-900);
+  color: var(--color-white);
+  font-family: var(--font-outfit);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0 0 0.5rem 0.5rem;
+  text-decoration: none;
+  /* WCAG 2.4.11 – visible focus when focused */
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   WCAG 2.4.7 / 2.4.11 – Focus Appearance
+   Every focusable element must have a clearly visible,
+   high-contrast focus indicator (≥3:1 against adjacent
+   colors, and encloses ≥ the element's perimeter).
+   ───────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: 2px;
+}
+
+/* Remove outline only when :focus-visible is NOT matched
+   (i.e. mouse users won't see a ring, keyboard users will). */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Links – WCAG 1.4.1 / 1.4.3 / 2.5.8
+   ───────────────────────────────────────────────────────── */
+a {
+  /* WCAG 1.4.1 – Use of Color: underline ensures links are
+     distinguishable by more than colour alone */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   WCAG 2.5.8 – Target Size (Minimum): 24 × 24 CSS pixels.
+   Attribution links receive extra padding to meet the
+   minimum touch/pointer target size without altering layout.
+   ───────────────────────────────────────────────────────── */
+.attribution a {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 4px;
+  color: hsl(228, 60%, 38%); /* darkened from 44% L to pass 4.5:1 on white */
 }
 
 .recipe__image {
@@ -85,6 +172,8 @@ body {
   margin-bottom: 1rem;
 }
 
+/* WCAG 1.3.1 – <dl> layout replacing the original <ul> with
+   inline <strong> / <span>, which was semantically ambiguous */
 .preparation-time__list {
   padding-left: 1.1rem;
   list-style-type: square;
@@ -96,6 +185,7 @@ body {
 .preparation-time__item {
   padding-left: 1.2rem;
   line-height: 1.45;
+  display: list-item;
 }
 
 .preparation-time__item::marker {
@@ -106,10 +196,16 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.preparation-time__label {
+  font-weight: 700;
+}
+
 .preparation-time__label,
 .preparation-time__value,
 .instructions__label {
   color: var(--color-stone-600);
+  display: inline;
+  margin-inline-start: 0;
 }
 
 .instructions__label {
@@ -182,10 +278,13 @@ body {
   border-bottom: 1px solid var(--color-stone-150);
 }
 
+/* WCAG 1.3.1 – <th> receives font-weight 400 to match previous visual design
+   while still being semantically a header cell */
 .nutrition__label {
   color: var(--color-stone-600);
   padding: 0.75rem 0.5rem 0.75rem 2rem;
   font-weight: 400;
+  text-align: left;
 }
 
 .nutrition__value {
@@ -194,13 +293,34 @@ body {
   font-weight: 700;
 }
 
+.footer {
+  margin-bottom: 1rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  /* WCAG 1.4.12 – Text Spacing: line height ≥ 1.5 × font size */
+  line-height: 1.6;
+  padding-block: 0.5rem;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+/* ─────────────────────────────────────────────────────────
+   WCAG 1.4.10 – Reflow: content must not require horizontal
+   scrolling at 320 CSS pixels wide (400% zoom on 1280px).
+   ───────────────────────────────────────────────────────── */
+@media (max-width: 320px) {
+  .recipe__content {
+    padding: 1.5rem 1rem;
+  }
+
+  .nutrition__label {
+    padding-left: 0.5rem;
+  }
+
+  .nutrition__value {
+    padding-right: 0.5rem;
+  }
 }
 
 @media (width>=768px) {
@@ -218,6 +338,7 @@ body {
     max-width: 735px;
     border-radius: 1.5rem;
     overflow: hidden;
+    margin-block: 1rem;
   }
 
   .recipe {
@@ -255,5 +376,36 @@ body {
   .nutrition__label,
   .nutrition__value {
     padding-block: 0.85rem;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   WCAG 1.4.12 – Text Spacing
+   Ensure no content is lost when the following are applied:
+   line-height ≥ 1.5 × font size
+   letter-spacing ≥ 0.12 × font size
+   word-spacing ≥ 0.16 × font size
+   The rules below protect the layout under those overrides.
+   ───────────────────────────────────────────────────────── */
+.preparation-time__list {
+  overflow: visible;
+}
+
+.preparation-time__item {
+  overflow: visible;
+}
+
+/* ─────────────────────────────────────────────────────────
+   WCAG 2.3.3 / prefers-reduced-motion
+   Honour the OS preference: disable or reduce motion.
+   ───────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -15,12 +15,15 @@
   </head>
 
   <body>
-    <main class="container">
+    <!-- WCAG 2.4.1 – Bypass Blocks: skip-to-main link -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main id="main-content" class="container">
       <article class="recipe">
+        <!-- WCAG 1.1.1 – Non-text Content: meaningful alt text for informative image -->
         <img
           class="recipe__image"
           src="./assets/images/image-omelette.jpeg"
-          alt=""
+          alt="A golden folded omelette on a white plate, garnished with fresh herbs"
         />
         <div class="recipe__content">
           <header class="recipe__header">
@@ -31,27 +34,37 @@
               filled with your choice of cheese, vegetables, or meats.
             </p>
           </header>
-          <section class="preparation-time">
-            <h2 class="preparation-time__title">Preparation time</h2>
-            <ul class="preparation-time__list">
-              <li class="preparation-time__item">
-                <strong class="preparation-time__label">Total:</strong>
-                <span class="preparation-time__value"
-                  >Approximately 10 minutes</span
-                >
-              </li>
-              <li class="preparation-time__item">
-                <strong class="preparation-time__label">Preparation:</strong>
-                <span class="preparation-time__value">5 minutes</span>
-              </li>
-              <li class="preparation-time__item">
-                <strong class="preparation-time__label">Cooking:</strong>
-                <span class="preparation-time__value">5 minutes</span>
-              </li>
-            </ul>
+          <!-- WCAG 1.3.1 – Info and Relationships: section labelled by its heading -->
+          <!-- WCAG 2.4.6 - Headings and Labels: using <h2> for each section -->
+          <section
+            class="preparation-time"
+            aria-labelledby="preparation-time-heading"
+          >
+            <h2 id="preparation-time-heading" class="preparation-time__title">
+              Preparation time
+            </h2>
+            <!-- WCAG 1.3.1 – using <dl> better communicates label/value pairs
+                 than a plain <ul> with inline <strong> -->
+            <dl class="preparation-time__list">
+              <div class="preparation-time__item">
+                <dt class="preparation-time__label">Total:</dt>
+                <dd class="preparation-time__value">
+                  Approximately 10 minutes
+                </dd>
+              </div>
+              <div class="preparation-time__item">
+                <dt class="preparation-time__label">Preparation:</dt>
+                <dd class="preparation-time__value">5 minutes</dd>
+              </div>
+              <div class="preparation-time__item">
+                <dt class="preparation-time__label">Cooking:</dt>
+                <dd class="preparation-time__value">5 minutes</dd>
+              </div>
+            </dl>
           </section>
-          <section class="ingredients">
-            <h2 class="ingredients__title">Ingredients</h2>
+          <!-- WCAG 2.4.6 - Headings and Labels: using <h2> for each section -->
+          <section class="ingredients" aria-labelledby="ingredients-heading">
+            <h2 id="ingredients-heading" class="ingredients__title">Ingredients</h2>
             <ul class="ingredients__list">
               <li class="ingredients__item">
                 <span class="ingredients__value">2-3 large eggs</span>
@@ -75,9 +88,11 @@
               </li>
             </ul>
           </section>
-          <hr class="recipe__divider" />
-          <section class="instructions">
-            <h2 class="instructions__title">Instructions</h2>
+          <!-- WCAG 1.3.1 – aria-hidden on purely decorative separators -->
+          <hr class="recipe__divider" aria-hidden="true" />
+          <!-- WCAG 2.4.6 - Headings and Labels: using <h2> for each section -->
+          <section class="instructions" aria-labelledby="instructions-heading">
+            <h2 id="instructions-heading" class="instructions__title">Instructions</h2>
             <ol class="instructions__list">
               <li class="instructions__item">
                 <strong class="instructions__label">Beat the eggs:</strong>
@@ -127,28 +142,35 @@
               </li>
             </ol>
           </section>
-          <hr class="recipe__divider" />
-          <section class="nutrition">
-            <h2 class="nutrition__title">Nutrition</h2>
+          <!-- WCAG 1.3.1 – aria-hidden on purely decorative separators -->
+          <hr class="recipe__divider" aria-hidden="true" />
+          <!-- WCAG 2.4.6 - Headings and Labels: using <h2> for each section -->
+          <section class="nutrition" aria-labelledby="nutrition-heading">
+            <h2 id="nutrition-heading" class="nutrition__title">Nutrition</h2>
             <p class="nutrition__description">
               The table below shows nutritional values per serving without the
               additional fillings.
             </p>
+            <!-- WCAG 1.3.1 – table with proper <th scope="row"> for row headers
+                 so screen readers can associate labels with values -->
             <table class="nutrition__table">
+              <caption class="visually-hidden">
+                Nutritional values per serving
+              </caption>
               <tr class="nutrition__row">
-                <td class="nutrition__label">Calories</td>
+                <th scope="row" class="nutrition__label">Calories</th>
                 <td class="nutrition__value">277kcal</td>
               </tr>
               <tr class="nutrition__row">
-                <td class="nutrition__label">Carbs</td>
+                <th scope="row" class="nutrition__label">Carbs</th>
                 <td class="nutrition__value">0g</td>
               </tr>
               <tr class="nutrition__row">
-                <td class="nutrition__label">Protein</td>
+                <th scope="row" class="nutrition__label">Protein</th>
                 <td class="nutrition__value">20g</td>
               </tr>
               <tr class="nutrition__row">
-                <td class="nutrition__label">Fat</td>
+                <th scope="row" class="nutrition__label">Fat</th>
                 <td class="nutrition__value">22g</td>
               </tr>
             </table>
@@ -161,6 +183,8 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor
+          <!-- WCAG 2.4.4 / 3.2.2 – inform users when a link opens in a new tab -->
+          <span class="visually-hidden">(opens in a new tab)</span>
         </a>
         . Coded by
         <a href="https://www.linkedin.com/in/flavio-rios-nieto/"
