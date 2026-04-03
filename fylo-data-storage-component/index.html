@@ -20,22 +20,29 @@
     <meta name="author" content="Flavio Rios" />
   </head>
   <body>
-    <main>
-      <div>
-        <img src="./assets/images/logo.svg" alt="" />
-        <div>
-          <img src="./assets/images/icon-document.svg" alt="" />
-          <img src="./assets/images/icon-folder.svg" alt="" />
-          <img src="./assets/images/icon-upload.svg" alt="" />
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content">
+      <section>
+        <img src="./assets/images/logo.svg" alt="Fylo" />
+        <div role="group" aria-label="Acciones de archivo">
+          <button aria-label="Nuevo documento">
+            <img src="./assets/images/icon-document.svg" alt="" />
+          </button>
+          <button aria-label="Carpeta">
+            <img src="./assets/images/icon-folder.svg" alt="" />
+          </button>
+          <button aria-label="Subir archivo">
+            <img src="./assets/images/icon-upload.svg" alt="" />
+          </button>
         </div>
-      </div>
+      </section>
       <div>
-        <p>You’ve used <strong>815 GB</strong> of your storage</p>
+        <p id="storage-label">You’ve used <strong>815 GB</strong> of your storage</p>
         <div><strong>185</strong> <span>GB Left</span></div>
-        <meter value="815" max="1000"></meter>
+        <meter value="815" max="1000" aria-labelledby="storage-label"></meter>
         <div>
-          <span>0 GB</span>
-          <span>1000 GB</span>
+          <span aria-hidden="true">0 GB</span>
+          <span aria-hidden="true">1000 GB</span>
         </div>
       </div>
     </main>
