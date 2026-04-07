@@ -1,3 +1,35 @@
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+a:focus {
+  outline: none;
+}
+a:focus-visible {
+  outline: 3px solid #26baa4;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+header a:focus-visible,
+section:last-of-type a:focus-visible {
+  outline-color: #ffffff;
+  outline-offset: 4px;
+}
+footer nav:last-of-type a:focus-visible {
+  outline-offset: 5px;
+  border-radius: 50%;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
