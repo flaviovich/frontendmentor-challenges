@@ -3,42 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Blog preview card</title>
-    <meta name="description" content="Flavio Rios" />
+    <title>HTML & CSS foundations | Frontend Mentor</title>
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles/main.css" />
+    <meta name="author" content="Flavio Rios" />
   </head>
   <body>
-    <main>
-      <article>
-        <img src="./assets/images/illustration-article.svg" alt="" />
-        <strong>Learning</strong>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content">
+      <article aria-labelledby="article-title">
+        <img
+          src="./assets/images/illustration-article.svg"
+          alt="Abstract illustration representing HTML and CSS code structure"
+        />
+        <span aria-label="Category: Learning">Learning</span>
         <time>Published 21 Dec 2023</time>
-        <h2>HTML & CSS foundations</h2>
+        <h1 id="article-title">
+          <a href="#">HTML & CSS foundations</a>
+        </h1>
         <p>
           These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
         <footer>
-          <img src="./assets/images/image-avatar.webp" alt="" />
+          <img
+            src="./assets/images/image-avatar.webp"
+            alt="Avatar of Greg Hooper, author of the article"
+          />
           <span>Greg Hooper</span>
         </footer>
       </article>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://www.linkedin.com/in/flavio-rios-nieto/">Flavio Rios</a
-        >.
-      </div>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/flavio-rios-nieto/">Flavio Rios</a>.
     </footer>
   </body>
 </html>
