@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Chat App CSS Illustration</title>
+    <title>Chat App for Dog Walkers | Frontend Mentor</title>
     <link
       rel="icon"
       type="image/png"
@@ -20,51 +20,86 @@
     <meta name="author" content="Flavio Rios" />
   </head>
   <body>
-    <main>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content">
       <article>
         <header>
-          <img src="./assets/images/avatar.jpg" alt="" />
+          <button aria-label="Go back" aria-hidden="true" tabindex="-1">
+            &lt;
+          </button>
+          <img
+            src="./assets/images/avatar.jpg"
+            alt="Profile photo of Samuel Green"
+          />
           <div>
             <h2>Samuel Green</h2>
             <p>Available to Walk</p>
           </div>
+          <button aria-label="Chat options menu">⋮</button>
         </header>
-        <ul>
-          <li>That sounds great. I’d be happy with that.</li>
+        <ul role="log" aria-label="Chat with Samuel Green">
+          <li aria-label="Message from Samuel">
+            That sounds great. I’d be happy with that.
+          </li>
 
-          <li>Could you send over some pictures of your dog, please?</li>
+          <li aria-label="Message from Samuel">
+            Could you send over some pictures of your dog, please?
+          </li>
 
-          <li>
-            <figure>
-              <img src="./assets/images/dog-image-1.jpg" alt="" />
-              <img src="./assets/images/dog-image-2.jpg" alt="" />
-              <img src="./assets/images/dog-image-3.jpg" alt="" />
-              <figcaption>Pictures of the dog</figcaption>
+          <li aria-label="Message from you">
+            <figure role="group">
+              <img
+                src="./assets/images/dog-image-1.jpg"
+                alt="Brown dog looking up diagonally with mouth open"
+              />
+              <img
+                src="./assets/images/dog-image-2.jpg"
+                alt="Dog lying down on sand"
+              />
+              <img
+                src="./assets/images/dog-image-3.jpg"
+                alt="Dog holding a thick long branch in its mouth in a forest"
+              />
+              <figcaption class="visually-hidden">
+                3 photos of the dog sent by the user
+              </figcaption>
             </figure>
           </li>
 
-          <li>Here are a few pictures. She’s a happy girl!</li>
+          <li aria-label="Message from you">
+            Here are a few pictures. She’s a happy girl!
+          </li>
 
-          <li>Can you make it?</li>
+          <li aria-label="Message from you">Can you make it?</li>
 
-          <li>
+          <li aria-label="Message from Samuel">
             She looks so happy! The time we discussed works. How long shall I
             take her out for?
           </li>
 
-          <li>
-            <span>30 minute walk</span>
-            <span>$29</span>
-          </li>
-
-          <li>
-            <span>1 hour walk</span>
-            <span>$49</span>
+          <li aria-label="Message from Samuel">
+            <fieldset aria-disabled="true">
+              <legend class="visually-hidden">Select walk duration</legend>
+              <label>
+                <input type="radio" name="walk-duration" value="30" />
+                <span>30 minute walk</span>
+                <span>$29</span>
+              </label>
+              <label>
+                <input type="radio" name="walk-duration" value="60" />
+                <span>1 hour walk</span>
+                <span>$49</span>
+              </label>
+            </fieldset>
           </li>
         </ul>
         <footer>
           <form>
-            <input type="text" placeholder="Type a message…" /><button type="submit">
+            <label>
+              <span class="visually-hidden">Type a message</span>
+              <input type="text" placeholder="Type a message…" />
+            </label>
+            <button type="submit" disabled aria-label="Send message">
               &gt;
             </button>
           </form>
