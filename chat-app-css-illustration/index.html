@@ -21,42 +21,46 @@
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <main id="main-content">
-      <article>
-        <header>
-          <button aria-label="Go back" aria-hidden="true" tabindex="-1">
+    <main id="main-content" class="main">
+      <article class="chat">
+        <header class="chat__header">
+          <button class="chat__back-btn" aria-label="Go back" aria-hidden="true" tabindex="-1">
             &lt;
           </button>
           <img
+            class="chat__avatar"
             src="./assets/images/avatar.jpg"
             alt="Profile photo of Samuel Green"
           />
-          <div>
-            <h2>Samuel Green</h2>
-            <p>Available to Walk</p>
+          <div class="chat__user-info">
+            <h2 class="chat__user-name">Samuel Green</h2>
+            <p class="chat__user-status">Available to Walk</p>
           </div>
-          <button aria-label="Chat options menu">⋮</button>
+          <button class="chat__menu-btn" aria-label="Chat options menu">⋮</button>
         </header>
-        <ul role="log" aria-label="Chat with Samuel Green">
-          <li aria-label="Message from Samuel">
+        <ul class="chat__messages" role="log" aria-label="Chat with Samuel Green">
+          <li class="chat__message chat__message--received" aria-label="Message from Samuel">
             That sounds great. I’d be happy with that.
           </li>
 
-          <li aria-label="Message from Samuel">
+          <li class="chat__message chat__message--received" aria-label="Message from Samuel">
             Could you send over some pictures of your dog, please?
           </li>
 
-          <li aria-label="Message from you">
-            <figure role="group">
+          <li class="chat__message chat__message--sent" aria-label="Message from you">
+            <figure class="chat__image-group" role="group">
               <img
+                class="chat__dog-image"
                 src="./assets/images/dog-image-1.jpg"
                 alt="Brown dog looking up diagonally with mouth open"
               />
               <img
+                class="chat__dog-image"
                 src="./assets/images/dog-image-2.jpg"
                 alt="Dog lying down on sand"
               />
               <img
+                class="chat__dog-image"
                 src="./assets/images/dog-image-3.jpg"
                 alt="Dog holding a thick long branch in its mouth in a forest"
               />
@@ -66,47 +70,47 @@
             </figure>
           </li>
 
-          <li aria-label="Message from you">
+          <li class="chat__message chat__message--sent" aria-label="Message from you">
             Here are a few pictures. She’s a happy girl!
           </li>
 
-          <li aria-label="Message from you">Can you make it?</li>
+          <li class="chat__message chat__message--sent" aria-label="Message from you">Can you make it?</li>
 
-          <li aria-label="Message from Samuel">
+          <li class="chat__message chat__message--received" aria-label="Message from Samuel">
             She looks so happy! The time we discussed works. How long shall I
             take her out for?
           </li>
 
-          <li aria-label="Message from Samuel">
-            <fieldset aria-disabled="true">
+          <li class="chat__message chat__message--received" aria-label="Message from Samuel">
+            <fieldset class="chat__walk-options" aria-disabled="true">
               <legend class="visually-hidden">Select walk duration</legend>
-              <label>
-                <input type="radio" name="walk-duration" value="30" />
-                <span>30 minute walk</span>
-                <span>$29</span>
+              <label class="chat__walk-option">
+                <input class="chat__walk-radio" type="radio" name="walk-duration" value="30" />
+                <span class="chat__walk-label">30 minute walk</span>
+                <span class="chat__walk-price">$29</span>
               </label>
-              <label>
-                <input type="radio" name="walk-duration" value="60" />
-                <span>1 hour walk</span>
-                <span>$49</span>
+              <label class="chat__walk-option">
+                <input class="chat__walk-radio" type="radio" name="walk-duration" value="60" />
+                <span class="chat__walk-label">1 hour walk</span>
+                <span class="chat__walk-price">$49</span>
               </label>
             </fieldset>
           </li>
         </ul>
-        <footer>
-          <form>
-            <label>
+        <footer class="chat__footer">
+          <form class="chat__form">
+            <label class="chat__input-label">
               <span class="visually-hidden">Type a message</span>
-              <input type="text" placeholder="Type a message…" />
+              <input class="chat__input" type="text" placeholder="Type a message…" />
             </label>
-            <button type="submit" disabled aria-label="Send message">
+            <button class="chat__send-btn" type="submit" disabled aria-label="Send message">
               &gt;
             </button>
           </form>
         </footer>
       </article>
-      <h1>Simple booking</h1>
-      <p>
+      <h1 class="main__title">Simple booking</h1>
+      <p class="main__description">
         Stay in touch with our dog walkers through the chat interface. This
         makes it easy to discuss arrangements and make bookings. Once the walk
         has been completed you can rate your walker and book again all through
@@ -115,10 +119,10 @@
     </main>
     <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by
-      <a href="https://www.linkedin.com/in/flavio-rios-nieto/">Flavio Rios</a>.
+      <a class="attribution__link" href="https://www.linkedin.com/in/flavio-rios-nieto/">Flavio Rios</a>.
     </footer>
   </body>
 </html>
